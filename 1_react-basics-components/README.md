@@ -40,7 +40,7 @@ const expenseTitle = 'Car Insurance';
 
 ## Props
 
-Props are also referred to as properties. They are used to transfer data from one component to the next (parent component to child component). They are typically used to render dynamically generated data.
+Props are also referred to as properties ("_customHTMLattributes_"). They are used to transfer data from one component to the next (parent component to child component). They are typically used to render dynamically generated data.
 
 > Note: A child component can never send props to a parent component since this flow is unidirectional (parent to child).
 
@@ -76,7 +76,7 @@ return(
 
 ### Questions
 
-1. <React.StrictMode>, poeple something doesn't use this only <App/>
+1. <React.StrictMode>, people something doesn't use this only <App/>
 2. Difference if a file is jsx and js
 3. Miss the autocomplete snippet for importing files
 

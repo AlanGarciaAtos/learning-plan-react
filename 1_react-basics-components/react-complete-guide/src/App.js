@@ -28,9 +28,11 @@ const App = () => {
     },
   ];
 
+  const message = "Hi there! Let's get started";
+
   return (
     <section>
-      <h1>Hi there! Let's get started</h1>
+      <h1>{message}</h1>
       <Expenses items={expenses} />
     </section>
   );

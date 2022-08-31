@@ -4,7 +4,7 @@
 
 1. See the other sections (1 & 2)
 2. Maybe see this other course by Nicolas https://www.udemy.com/course/react-guia-definitiva-hooks-router-redux-next-proyectos/learn/lecture/27691300#overview
-3.
+3. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
 ### Optional TODO
 
