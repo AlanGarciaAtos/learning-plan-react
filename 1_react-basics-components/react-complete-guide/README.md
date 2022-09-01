@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+This is a really good summary about react (basic concepts) https://www.freecodecamp.org/news/react-interview-questions-and-answers/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Why components?
 
-## Available Scripts
+A component is a self-contained, reusable code block that divides the user interface into smaller pieces rather than building the entire UI in a single file.
 
-In the project directory, you can run:
+**Reusability:**
+Don't repeat yourself
+<br>
 
-### `npm start`
+**Separation of Concerns:**
+Don't do too many things in one and the same place ( function )
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Split big chunks of code into
+multiple smaller functions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A _declarative_ style, like what react has, allows you to control flow and state in your application by saying "It should look like this" (let react figure it out).
+<br>
+An _imperative_ style turns that around and allows you to control your application by saying "This is what you should do".
 
-### `npm test`
+**Declarative approach his is great analogy:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> An imperative response: Go out of the north exit of the parking lot and take a left. Get on I-15 south until you get to the Bangerter Highway exit. Take a right off the exit like you’re going to Ikea. Go straight and take a right at the first light. Continue through the next light then take your next left. My house is #298.
 
-### `npm run build`
+> A declarative response: My address is 298 West Immutable Alley, Draper Utah 84020\*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## What is JSX?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Is a javasript extension syntax.
+<br>
+Enables and simplifies the creation of HTML in React, resulting in more readable and understandable markup.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Output dynamic data
 
-### `npm run eject`
+To make use of a variable we need to make use of {}
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```jsx
+const expenseTitle = 'Car Insurance';
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Props
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Props are also referred to as properties ("_customHTMLattributes_"). They are used to transfer data from one component to the next (parent component to child component). They are typically used to render dynamically generated data.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> Note: A child component can never send props to a parent component since this flow is unidirectional (parent to child).
 
-## Learn More
+When we combined components we're making composition
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Closer look to JSX
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In legacy projects in react we will see `import` of React although in newer version you don't need to, because react do it under the hood.
+<br>
+You will see the `import` in EVERY component (I think).
 
-### Code Splitting
+This was in old versions, less readable and verbose
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```js
+return React.createElement (
+  'div',
+  { } ,
+  React.createElement ( 'h2', {}, "Let's get started!");
+  React.createElement ( Expenses, {items:expenses});
+```
 
-### Analyzing the Bundle Size
+New version, better and readable
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```js
+return(
+  <div>
+    <h2> Let's get started! </h2>
+    <Expenses items={expenses}>
+  </div>
+)
 
-### Making a Progressive Web App
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# React State & Working with Events
 
-### Advanced Configuration
+Adding the 'Handler' tells its a function attached to an eventListener, more for naming convention.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```jsx
+const clickHandler = () => {
+  console.log('Clicked!!!');
+};
+<button onClick={clickHandler}>Change Title</button>;
+```
 
-### Deployment
+### Questions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. <React.StrictMode>, people something doesn't use this only <App/>
+2. Difference if a file is jsx and js
+3. Miss the autocomplete snippet for importing files
 
-### `npm run build` fails to minify
+### TODO
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Tarea: Time to Practice: React & Component Basics** Time to practice what you learned and write your own React code, including components, props & more!
+2. Hacer lode la tarea y ver que max tiene un componente `Expenses` tenemos que crearlo o verlo
+3.

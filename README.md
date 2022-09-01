@@ -11,3 +11,9 @@
 1. What is a Hashmap and how to used it?
 2. Learn about vite
 3.
+
+### Good videos to explain
+
+1. https://www.youtube.com/watch?v=ESd5Nt8sHE0
+2. https://www.youtube.com/watch?v=j1LqXC5HFCk
+3. https://www.youtube.com/watch?v=6_pru8U2RmM
