@@ -54,21 +54,21 @@ You will see the `import` in EVERY component (I think).
 
 This was in old versions, less readable and verbose
 
-```js
+```jsx
 return React.createElement (
   'div',
   { } ,
-  React.createElement ( 'h2', {}, "Let's get started!");
+  React.createElement ( 'h2', {}, "Let's get started!"),
   React.createElement ( Expenses, {items:expenses});
 ```
 
 New version, better and readable
 
-```js
+```jsx
 return(
   <div>
     <h2> Let's get started! </h2>
-    <Expenses items={expenses}>
+    <Expenses items={expenses}/>
   </div>
 )
 
@@ -84,15 +84,67 @@ const clickHandler = () => {
 };
 <button onClick={clickHandler}>Change Title</button>;
 ```
+<hr/>
 
-### Questions
+# React State & Working with Events
 
-1. <React.StrictMode>, people something doesn't use this only <App/>
-2. Difference if a file is jsx and js
-3. Miss the autocomplete snippet for importing files
+Adding the 'Handler' tells its a function attached to an eventListener, more for naming convention.
 
-### TODO
+```jsx
+const clickHandler = () => {
+  console.log('Clicked!!!');
+};
+<button onClick={clickHandler}>Change Title</button>;
+```
 
-1. **Tarea: Time to Practice: React & Component Basics** Time to practice what you learned and write your own React code, including components, props & more!
-2. Hacer lode la tarea y ver que max tiene un componente `Expenses` tenemos que crearlo o verlo
-3.
+Example of naming convention in hooks
+
+```jsx
+const [title, setTitle] = useState(props.title);
+```
+
+Updating State That Depends On The Previous State
+Some examples you can use while using useState
+
+```jsx
+const [enteredTitle, setEnteredTitle] = useState('');
+const [enteredAmount, setEnteredAmount] = useState('');
+const [enteredDate, setEnteredDate] = useState('');
+
+// const [userInput, setUserInput] = useState({
+//   enteredTitle: '',
+//   enteredAmount: '',
+//   enteredDate: '',
+// });
+
+const titleChangedHandler = (e) => {
+  setEnteredTitle(e.target.value);
+
+  //Another way to use useState with an object
+  // setUserInput({
+  //   ...userInput,
+  //   enteredTitle: e.target.value,
+  // });
+
+  //If your state update depends on the previous state, use this function form.
+  // setUserInput((prevState) => {
+  //   return {
+  //     ...prevState,
+  //     enteredTitle: e.target.value,
+  //   };
+  // });
+};
+```
+
+### Two-Way binding
+
+Means that for inputs we don't just listen to changes, but we can also pass a new value back into the input. (Reset or change the input programatically)
+
+Useful when you're working with forms because it allows you to gather user input, but then also change it.
+
+### Lifting State up
+
+It is about moving data from a child component to some parent component to either use it there or to then pass it down to some other child component.
+
+### Controlled vs Uncontrolled component
+
