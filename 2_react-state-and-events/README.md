@@ -18,6 +18,10 @@ const [title, setTitle] = useState(props.title);
 Updating State That Depends On The Previous State
 Some examples you can use while using useState
 
+React Fragment
+
+React query (libreria es como rxjs podemos hacer paginizacion, lazy loading)
+
 ```jsx
 const [enteredTitle, setEnteredTitle] = useState('');
 const [enteredAmount, setEnteredAmount] = useState('');

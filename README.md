@@ -24,9 +24,9 @@
 1. <React.StrictMode>, people something doesn't use this only <App/>
 2. Difference if a file is jsx and js
 3. Miss the autocomplete snippet for importing files
+4. When seeing the course of nico (Hola mundo) skip or see another course for routing.(different or deprecated i don't know)
 
 ### TODO | react basics components
 
 1. **Tarea: Time to Practice: React & Component Basics** Time to practice what you learned and write your own React code, including components, props & more!
 2. Hacer lode la tarea y ver que max tiene un componente `Expenses` tenemos que crearlo o verlo
-3.
